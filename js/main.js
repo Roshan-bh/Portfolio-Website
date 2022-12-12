@@ -36,6 +36,7 @@ icon.onclick=function(){
 //contact-from validation
 
     var nameError=document.getElementById("name-error");
+    var phoneNumberError=document.getElementById("phoneNumber-error");
     var emailError=document.getElementById("email-error");
     var messageError=document.getElementById("message-error");
     var submitError=document.getElementById("submit-error");
@@ -47,6 +48,16 @@ icon.onclick=function(){
             return false;
         }
         nameError.innerHTML='<i class="fas fa-check-circle"></i>';
+        return true;
+    }
+
+    function validatePhoneNumber(){
+        var phoneNumber=document.getElementById('number').value;
+        if (phoneNumber.length < 10){
+            phoneNumberError.innerHTML = " phone number field must be filled.";
+            return false;
+        }
+        phoneNumberError.innerHTML='<i class="fas fa-check-circle"></i>';
         return true;
     }
 
@@ -76,7 +87,7 @@ icon.onclick=function(){
     }
 
     function validateForm(){
-       if(!validateName() || !validateEmail() || !validateMessage()){
+       if(!validateName() || !validatePhoneNumber() || !validateEmail() || !validateMessage()){
          submitError.style.display='block';
          submitError.innerHTML='please! fill the require fields as asked..'
          setTimeout(function(){

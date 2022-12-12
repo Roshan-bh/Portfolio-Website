@@ -257,7 +257,8 @@
               <span class=" error " id="email-error"></span>
             </div>
             <div class="mb-4">
-              <input type="number" id="number" class="form-control" placeholder="enter your number..." autocomplete="off">
+              <input type="number" id="number" class="form-control" placeholder="enter your number..." autocomplete="off" onkeyup="validatePhoneNumber()">
+              <span class=" error " id="phoneNumber-error"></span>
             </div>
             <div class="mb-3">
               <textarea  id="message" cols="30" rows="10" class="form-control" placeholder="write a message.." autocomplete="off" onkeyup="validateMessage()"></textarea>
