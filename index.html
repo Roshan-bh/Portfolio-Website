@@ -353,10 +353,9 @@
 
       function sendEmail(){
           Email.send({
-            secureToken:"702b40dd-240d-47c5-bef6-cae5a106d6a6",
-            To : "donework121@gmail.com",
-            // From : document.getElementById("email").value,
-            From:"workcarry04@gmail.com",
+            secureToken:"604ae964-5e81-46e2-9481-339e5d06af83",
+            To : "lpggasdash@gmail.com",
+            From : document.getElementById("email").value,
             Subject : "From Portfolio Website",
             Body : "Name:"+ document.getElementById("name").value
            +"<br>Email:"+document.getElementById("email").value+
@@ -364,18 +363,7 @@
            "<br>Message:"+document.getElementById("message").value,
             
           }).then(
-            message => {
-                        //console.log (message);
-                  if(message=='OK'){
-                  alert('Your mail has been send. Thank you for connecting.');
-                  }
-                  else{
-                    // console.error (message);
-                    alert('There is error at sending message. ');
-						
-					      }
-
-            }
+            message =>alert("Message sent successfully ")
           );
      }
 
